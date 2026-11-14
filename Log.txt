@@ -5,3 +5,9 @@ Setup two xubuntu Vms: Ansible has been installed on the first vm and now testin
 Sucessfully established ssh connection
 
 Established git connection from Linus vm
+
+Created inventory and playbook
+
+Now testing playbook
+
+Succesfully ran playbook
