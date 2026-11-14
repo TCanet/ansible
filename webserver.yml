@@ -1,0 +1,36 @@
+---
+- name: Configure the practice web server
+  hosts: webservers
+  become: true
+
+  tasks:
+    - name: Install nginx
+      ansible.builtin.apt:
+        name: nginx
+        state: present
+        update_cache: true
+        cache_valid_time: 3600
+
+    - name: Decploy the homepage
+      ansible.builtin.copy:
+        dest: /var/www/html.index.html
+        owner: root
+        group: root
+        mode: "0644"
+        content: |
+          <!DOCTYPE html>
+          <html>
+          <head>
+             <titel>Ansible Practice</title>
+          </head>
+          <body>
+            <h1>Configured by Ansible</h1>
+            <p>My First automated server</p>
+          </body>
+          </html>
+
+    - name: Ensure nginx is running and enabled
+      ansible.builtin.service:
+        name: nginx
+        state: started
+        enabled: true
