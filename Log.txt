@@ -3,3 +3,5 @@ Progress Log
 Setup two xubuntu Vms: Ansible has been installed on the first vm and now testing ssh connection to the second vm
 
 Sucessfully established ssh connection
+
+Established git connection from Linus vm
