@@ -1,0 +1,24 @@
+---
+- name: Apply basic lab security
+  hosts: webservers
+  become: true
+
+  tasks:
+    - name: Create a protected directory
+      ansible.builtin.file:
+        path: /etc/lab-security
+        state: directory 
+        owner: root
+        group: root
+        mode: "0700"
+
+
+    - name: Create a confidential practice file
+      ansible.builtin.copy:
+        dest: /etc/lab-security/confidential.txt
+        content: |
+          Practice Data only.
+          Only root should be able to read this file
+        owner: root
+        group: root
+        mode: "0600"
