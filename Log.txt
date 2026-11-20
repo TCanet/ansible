@@ -15,3 +15,5 @@ Succesfully ran playbook
 Testing: Logged Changes as TCanet at github
 
 Testing Security Practices
+
+Completed Security Practices note: This was more like basic ansible practice. Need to look up current security practices and emulate 
