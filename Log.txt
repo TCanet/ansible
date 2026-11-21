@@ -19,3 +19,5 @@ Testing Security Practices
 Completed Security Practices note: This was more like basic ansible practice. Need to look up current security practices and emulate 
 
 Now setting some firewall restrictions through ansible
+
+Completed playbook and testing of firewall configs
